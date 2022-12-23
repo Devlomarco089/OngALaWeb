@@ -1,0 +1,13 @@
+{% block content %}
+<ul>
+{% for noticia in object_list %}
+    <li>
+    <h3><a href="{% url 'articulo-datallado' noticia.pk %}" >{{ noticia.titulo }}</a></h3>
+    {{ noticia.categoria }}
+    {{ noticia.imagen }}
+    <br>
+    {{ noticia.subtitulo }} - {{ noticia.fecha }} - {{ noticia.publicado }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock content %}

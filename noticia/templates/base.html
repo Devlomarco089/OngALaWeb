@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+
+
+<head>
+<title> {% block title %} Inicio {% endblock title %}  </title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- estilado de pagina -->
+
+<link href="{% static 'css/estilado.css' %}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<!-- estilado -->
+
+</head>
+
+<body>
+<!-- encabezado de pagina -->
+    <header class="hero">
+        <nav class="nav_logo">
+        <h2 class="logo">Fundación <span class="span" >ALA'</span></h2>
+            <ul class="nav_links">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="">Sobre Nosotros</a></li>
+                <li><a href="">Noticias</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Cerrar Sesion</a></li>
+                    <li><a>@{{ user.username }}</a></li>
+                {% else %}
+                    <li><a href="{% url 'register' %}">Registrarse</a></li>
+                    <li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+
+
+<!-- fin del encabezado de pagina -->
+<main>
+    {% block content %}
+
+
+    {% endblock %}
+</main>
+<footer>
+    <ul>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    </ul>
+    <span>Copyright 2022, Fundación ALA'</span>
+</footer>
+</body>
+
+</html>

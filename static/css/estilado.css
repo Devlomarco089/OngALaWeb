@@ -1,0 +1,161 @@
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5f7;
+}
+.hero{
+  background-image: url('../img/zyro-image.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+  height: 13vh;
+  color: #fff;
+  opacity: 0.9;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.logo{
+  color: white;
+  font-size: 28px;
+}
+.span{
+  color: rgb(7, 131, 7);
+}
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover{
+  color: green;
+  transition: .3s;
+}
+main{
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#5ab168 0.75px, #e5e5f7 0.75px);
+  background-size: 15px 15px;
+}
+
+/* main */
+/* -------------------------- */
+.inicio{
+  text-align: center;
+  padding-top: 4%;
+  opacity: 1;
+}
+.sobre-nosotros{
+  text-align: center;
+  padding-top: 4%;
+  opacity: 1;
+  padding-bottom: 4%;
+}
+.noticia{
+  background-color: #fff;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  border-radius: 10px;
+}
+.noticia h3 a{
+  text-decoration: none;
+  color: black;
+}
+.noticia h3{
+  font-size: 29px;
+}
+.noticia img{
+  padding-top: 40px;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  max-height: 300px;
+  max-width: 300px;
+}
+.logo-whatsapp{
+  height: 100px;
+
+}
+.logo-facebook{
+  height: 100px;
+
+}
+.logo-instagram{
+  height: 100px;
+
+}
+.logo-facebook:hover, .logo-instagram:hover, .logo-whatsapp:hover{
+  transform: translateY(12px);
+}
+h5{
+  font-size: 40px;
+}
+.div-contactos{
+  text-align: center;
+  padding-top: 5%;
+}
+
+/* ------------------------- */
+
+
+footer{
+  margin-top: 8px;
+  background-color: rgb(11, 52, 11);
+  text-align: center;
+  height: 60px;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+}
+footer ul li{
+  margin-top: 10px;
+  list-style-type: none;
+  display: inline-block;
+}
+span{
+  color: #fff;
+}
+/* --------------------- */
+
+h1{
+  text-align: center;
+}
+.imagennoticia{
+  text-align: center;
+}
+h3, h2{
+  padding-left: 29px;
+}
+.textonoticia{
+  padding-left: 9px;
+}
+p{
+  padding-left: 9px;
+}
+.comentar{
+  margin-left: 9px;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+}
+.nocoments{
+  padding-bottom: 4px;
+}
+

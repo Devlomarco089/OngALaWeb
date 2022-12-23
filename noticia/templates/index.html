@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- seccion inicial -->
+<div class="inicio">
+<h1>Fundación ALA'</h1>
+<p>Fundacion dedicada a la orientacion laborar de los argentinos y argentinas del chaco.</p>
+</div>
+
+<!-- fin seccion  -->
+
+<!-- inicio sesion sobre nosotros -->
+<div class="sobre-nosotros">
+<h2>Sobre Nosotros</h2>
+<p>Fundacion con el fin de la guia en orientacion laboral de los ciudadanos de la provincia del chaco</p>
+</div>
+<!-- fin sobre nosotros -->
+<!-- noticia -->
+<div class="noticia">
+    <div class="unica-noticia">
+    {% for noticia in object_list %}
+        {% if noticia.imagen %}<img src="{{noticia.imagen.url}}" class="imagennoticia">
+        {% else %}  <img src="{% static 'noticia/noimagenn.png' %}" class="imagennoticia">
+        {% endif %}
+        <h3><a href="{% url 'articulodetallado' noticia.pk %}" >{{ noticia.titulo }}</a></h3>
+        <p>{{ noticia.categoria }}</p>
+        <br>
+        <h4>{{ noticia.subtitulo }}</h4>
+        <h4>{{ noticia.fecha }}</h4>
+    {% endfor %} 
+    </div>
+    </div>
+
+<!-- fin noticia -->
+
+<div class="div-contactos">
+<h5 class="textcontactos" id="contacto">Contactanos</h5>
+<p>Queres contactarnos para ser parte de la Fundacion</p>
+<br>
+<br>
+<div class="contactos">
+    <a href="#" class="logo-facebook" id="animacion"><img src="{% static 'img/logofacebook.png' %}" class="logo-facebook"></a>
+    <a href="#" class="logo-instagram" id="animacion"><img src="{% static 'img/logoinstagram.png' %}" class="logo-instagram"></a>
+    <a href="#" class="logo-whatsapp" id="animacion"><img src="{% static 'img/logowsp.png' %}" class="logo-whatsapp"></a>
+</div>
+</div>
+<br>
+<br>
+
+
+{% endblock %}
