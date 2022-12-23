@@ -80,11 +80,10 @@ WSGI_APPLICATION = 'OngAlaWeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'basedatosongalaweb',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'Devlomarco089$basedatosongalaweb',
+        'USER': 'Devlomarco089',
+        'PASSWORD': 'ajedrez0891',
+        'HOST': 'Devlomarco089.mysql.pythonanywhere-services.com',
     }
 }
 
